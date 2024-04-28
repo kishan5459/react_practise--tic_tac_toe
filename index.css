@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --background-color: #f6f6f6;
+    --foreground-color: #727683;
+    --primary-text-color: #0a0a0a;
+    --secondary-text-color: #26ffcb;
+    --toggle-bg: #f0eb9d;
+    --toggle-fg: #ffd000;
+}
+  
+[data-theme='dark']{
+    --background-color: #152026;
+    --foreground-color: #1f3540;
+    --primary-text-color: #f6f6f6;
+    --secondary-text-color: #26ffcb;
+    --toggle-bg: #283452;
+    --toggle-fg: #00a6ff;
+}

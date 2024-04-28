@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react'
-import './TicTacToe.css'
+import styles from './TicTacToe.module.css'
 import circle_icon from '../../assets/circle.png'
 import cross_icon from '../../assets/cross.png'
+import '../../../index.css'
 
 let data = ["","","","","","","","",""]
 
@@ -87,26 +88,26 @@ export const TicTacToe = () => {
   }
 
   return (
-    <div className='container'>
-      <p className='title' ref={titleRef}>Tic Tac Toe Game in <span>React</span></p>
-      <div className="board">
-        <div className="row1">
-          <div className="boxes" onClick={(e) => {toggle(e,0)}} ref={box0}></div>
-          <div className="boxes" onClick={(e) => {toggle(e,1)}} ref={box1}></div>
-          <div className="boxes" onClick={(e) => {toggle(e,2)}} ref={box2}></div>
+    <div className={styles.container}>
+      <p className={styles.title} ref={titleRef}>Tic Tac Toe Game in <span>React</span></p>
+      <div className={styles.board}>
+        <div className={styles.row1}>
+          <div className={styles.boxes} onClick={(e) => {toggle(e,0)}} ref={box0}></div>
+          <div className={styles.boxes} onClick={(e) => {toggle(e,1)}} ref={box1}></div>
+          <div className={styles.boxes} onClick={(e) => {toggle(e,2)}} ref={box2}></div>
         </div>
-        <div className="row2">
-          <div className="boxes"  onClick={(e) => {toggle(e,3)}} ref={box3}></div>
-          <div className="boxes"  onClick={(e) => {toggle(e,4)}} ref={box4}></div>
-          <div className="boxes"  onClick={(e) => {toggle(e,5)}} ref={box5}></div>
+        <div className={styles.row2}>
+          <div className={styles.boxes}  onClick={(e) => {toggle(e,3)}} ref={box3}></div>
+          <div className={styles.boxes}  onClick={(e) => {toggle(e,4)}} ref={box4}></div>
+          <div className={styles.boxes}  onClick={(e) => {toggle(e,5)}} ref={box5}></div>
         </div>
-        <div className="row3">
-          <div className="boxes" onClick={(e) => {toggle(e,6)}} ref={box6}></div>
-          <div className="boxes" onClick={(e) => {toggle(e,7)}} ref={box7}></div>
-          <div className="boxes" onClick={(e) => {toggle(e,8)}} ref={box8}></div>
+        <div className={styles.row3}>
+          <div className={styles.boxes} onClick={(e) => {toggle(e,6)}} ref={box6}></div>
+          <div className={styles.boxes} onClick={(e) => {toggle(e,7)}} ref={box7}></div>
+          <div className={styles.boxes} onClick={(e) => {toggle(e,8)}} ref={box8}></div>
         </div>
       </div>
-      <button className='reset' onClick={() => {resetData()}}>Reset</button>
+      <button className={styles.reset} onClick={() => {resetData()}}>Reset</button>
     </div>
   )
 }

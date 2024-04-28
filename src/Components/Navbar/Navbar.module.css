@@ -1,0 +1,15 @@
+.container {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    color: var(--primary-text-color);
+}

@@ -1,0 +1,48 @@
+.toggleContainer {
+    position: relative;
+  }
+  
+  .toggle {
+    visibility: hidden;
+  }
+  
+  .toggle + label {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em; /* Adjust font size as needed */
+    cursor: pointer;
+    color: var(--primary-text-color);
+    white-space: nowrap; /* Corrected property name */
+  }
+  
+  .toggle + label::before {
+    content: "";
+    height: 1.5em; /* Adjusted height */
+    width: 3em; /* Adjusted width */
+    border-radius: 2em; /* Matched the height for perfect circle */
+    background-color: var(--toggle-bg);
+    margin-right: 1em; /* Adjusted margin */
+    transition: background-color 250ms ease-in-out;
+  }
+  
+  .toggle + label::after {
+    content: '';
+    height: 1.5em; /* Adjusted handle size */
+    width: 1.5em; /* Adjusted handle size */
+    border-radius: 50%; /* Perfect circle for handle */
+    background-color: var(--toggle-fg);
+    position: absolute;
+    left: 0.2em;
+    transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
+  }
+  
+  .toggle:checked + label::after {
+    transform: translateX(100%); /* Adjusted for bigger toggle */
+  }
+  
+  @media (max-width: 768px) {
+    .toggle + label {
+      font-size: 1em; /* Adjusted font size for smaller screens */
+    }
+  }
+  
