@@ -13,6 +13,7 @@
     cursor: pointer;
     color: var(--primary-text-color);
     white-space: nowrap; /* Corrected property name */
+    transition: color 250ms ease-in-out;
   }
   
   .toggle + label::before {

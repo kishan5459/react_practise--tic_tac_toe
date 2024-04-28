@@ -1,8 +1,7 @@
-/* TicTacToe.module.css */
-
 .container {
     text-align: center;
     background: var(--background-color);
+    transition: background-color 250ms ease-in-out;
 }
   
 .title {
@@ -12,11 +11,13 @@
   justify-content: center;
   align-items: baseline;
   margin-bottom: 2vh;
+  transition: color 250ms ease-in-out;
 }
   
 .title span {
   color: var(--secondary-text-color);
   padding-left: 1vw;
+  transition: color 250ms ease-in-out;
 }
 
 .title img{
@@ -38,6 +39,7 @@
   color: var(--secondary-text-color);
   margin-top: 6vh;
   margin-bottom: 6.2vh;
+  transition: background-color 250ms ease-in-out,color 250ms ease-in-out;
 }
   
 .boxes {
@@ -50,6 +52,7 @@
   border: 0.3vw solid var(--foreground-color);
   border-radius: 1vw;
   cursor: pointer;
+  transition: background-color 250ms ease-in-out;
 }
   
 .boxes img {
@@ -70,7 +73,7 @@
   .boxes {
     height: 20vh;
     width: 20vw;
-    border-width: 0.7vw;
+    border-width: 2px;
     border-radius: 1.5vw;
     font-size: 3vw;
     padding: 1vw;
@@ -81,13 +84,12 @@
     align-items: baseline;
   }
   .title img{
-    height: 5vh;
-    width: 5vw;
-    padding-top: 1vh;
+    height: 5vw;
+    width: 3vw;
   }
   .reset{
-    width: 20vw;
-    height: 10vh;
+    max-width: 20vw;
+    max-height: 10vh;
     margin-top: 5vh;
     margin-bottom: 6vh;
   }
