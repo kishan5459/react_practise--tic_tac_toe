@@ -1,15 +1,21 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState,useEffect } from 'react'
 import styles from './TicTacToe.module.css'
 import circle_icon from '../../assets/circle.png'
 import cross_icon from '../../assets/cross.png'
 import '../../../index.css'
+import { Modal } from '../Modal/Modal'
 
 let data = ["","","","","","","","",""]
 
 export const TicTacToe = () => {
 
+  useEffect(() => {
+    setOpenModal(true)
+  },[])
+
   let [count,setCount] = useState(0)
   let [lock,setLock] = useState(false)
+  let [openModal, setOpenModal] = useState(false)
   let titleRef = useRef(null)
 
   let box0 = useRef(null)
@@ -101,6 +107,9 @@ export const TicTacToe = () => {
 
   return (
     <div className={styles.container}>
+      <div>
+        {openModal && <Modal setOpenModal={setOpenModal} />}
+      </div>
       <p className={styles.title} ref={titleRef}>Tic Tac Toe Game in <span>React</span></p>
       <div className={styles.board}>
         <div className={styles.row1}>
@@ -119,7 +128,7 @@ export const TicTacToe = () => {
           <div className={styles.boxes} onClick={(e) => {toggle(e,8)}} ref={box8}></div>
         </div>
       </div>
-      <button className={styles.reset} onClick={() => {resetData()}}>Reset</button>
+      <button className={styles.reset} onClick={() => {resetData(),setOpenModal(true)}}>Reset</button>
     </div>
   )
 }
